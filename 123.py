@@ -45,4 +45,3 @@ for value in farmAnimals:
     total = sum(farmAnimals.values())
 print("the total number of animals you have in your farm is" ,total)
 
-

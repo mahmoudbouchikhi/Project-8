@@ -10,7 +10,6 @@ Here is what the program needs to do:
 6.Return True if the list has adjacent duplicate elements7.
 Shift all elements by one to the right by one and move the
 last element into first position8.
-
 then each function is followed by its function test
 '''
 N = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -59,32 +58,33 @@ def test_secondLargest():
 
 
 def evenElementInFront(N):
-    for i in range(0,len(N)):
-        if i%2==0:
+    for i in range(0, len(N)):
+        if i % 2 == 0:
             N.insert(0, N.pop(i))
     return N
 
+
 def test_evenElementInFront():
-    assert evenElementInFront([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])==([8, 6, 4, 2, 0, 1, 3, 5, 7, 9])
+    A = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert evenElementInFront(A) == ([8, 6, 4, 2, 0, 1, 3, 5, 7, 9])
+
 
 def adjacentExist(N):
-    for i in range(0, len(N)-1):
-      if  N[i] == N[i + 1] :
-          return True
+    for i in range(0, len(N) - 1):
+        if N[i] == N[i + 1]:
+            return True
     return False
 
+
 def test_adjacentExist():
-    assert adjacentExist(([0,1,2,2,3,4,5]))== True
+    assert adjacentExist(([0, 1, 2, 2, 3, 4, 5])) == True
+
 
 def shiftByOneRight(N):
     N.insert(0, N.pop(-1))
     return N
 
+
 def test_shiftByOneRight():
-    assert shiftByOneRight([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])== [9, 0, 1, 2, 3, 4, 5, 6, 7, 8]
-'''
-N = [14, 25, 58, 71, 35, 41, 254, 25, 47, 89]
-new_A = shiftByOneRight(N)
-print(N)
-print(new_A)
-'''
+    B = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert shiftByOneRight(B) == [9, 0, 1, 2, 3, 4, 5, 6, 7, 8]

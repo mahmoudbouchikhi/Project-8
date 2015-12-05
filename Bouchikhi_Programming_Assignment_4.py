@@ -7,7 +7,8 @@ Name:Mahmoud Bouchikhi
 
 Design:
 
-    Description:  This program will Process different tasks on a list that the user will choose.
+    Description: This program will Process different tasks
+                 on a list that the user will choose.
 
     Input:        Get a list of from user
 
@@ -17,9 +18,11 @@ Design:
 
     Input:        Get Menu selection from user
 
-    Processing:   Depend on the task selected by user, program execute the function in subject
+    Processing:   Depend on the task selected by user, program execute
+                  the function in subject
 
-    output:       print the result of the function related to task selected by user
+    output:       print the result of the function related to task
+                  selected by user
 
     Test Cases:   case 1: input 1,2,3,4,6,9,28 and expect my list in the
                   first output to look like [1,2,3,4,6,9,28]
@@ -27,11 +30,17 @@ Design:
                   case 2: select number 4 from the menu to Check if the list
                   is sorted in increasing order and expect to get True
                 PASS
-                  case 3: select number 6 to Remove the middle element if the list length is odd,
-                   or the middle two, if it is even and expect [1, 2, 3, 6, 9, 28]
+                  case 3: select number 6 to Remove the middle element if
+                          the list length is odd, or the middle two,
+                          if it is even and expect [1, 2, 3, 6, 9, 28]
+
                 PASS
-                    all other functions were tested the same way and they all pass
-                    I have documented them in the attached document
+
+                  All other functions were tested the same way
+                  and they all pass
+
+                All tests are documented in the attached file
+                (Unit_testing.doc)
 """
 
 
@@ -59,7 +68,6 @@ def swap_first_and_last(nums):
 
 
 def zero_in_evens(nums):
-    #new_N = nums
     for i in range(0, len(nums)):
         if not (i % 2):
             nums[i] = 0
@@ -180,9 +188,11 @@ def main():
     print("Great, let's create our list, first")
     # get list from user
     values = input("Please enter now the numbers of your list,"
-                   " and don't forget to separate them with a comma ").split(',')
+                   " and don't forget to separate them "
+                   ""
+                   "with a comma ").split(',')
     # convert input to integers
-    values = [int(i) for i in values]
+    #values = [int(i) for i in values]
     print("Ok, so list now is ", values, "\nlet's get started")
     input("please press enter to see the main menu")
     # introduce main menu to user
